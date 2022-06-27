@@ -11,7 +11,7 @@ If you wish you follow how this starter project was created please visit this <a
 Navigate into your new site’s directory and install the packages.
 
 ```shell
- yarn start
+ yarn install
 ```
 
 2.  **Start developing.**
