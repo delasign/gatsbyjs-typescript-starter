@@ -1,10 +1,12 @@
 <h1 align="center">
-  <a href="https://www.delasign.com/">delasign's</a> Opensource Typescript + Gatsby Starter Project
+  <a href="https://www.delasign.com/">delasign's</a> Opensource Redux + Typescript + Gatsby Starter Project
 </h1>
 
 ## 🚀 Quick start
 
 If you wish you follow how this starter project was created please visit this <a href="https://www.delasign.com/blog/add-typescript-to-gatsbyjs">link</a>.
+
+Additionally, we added React Redux using our Quick start guide available at this <a href="https://delasign.com/blog/ts-react-redux-guide-2022/">link</a>.
 
 1.  **Run Yarn Install**
 
