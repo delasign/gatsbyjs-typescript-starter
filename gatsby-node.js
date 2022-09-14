@@ -11,7 +11,7 @@ const Pages = [
 ];
 
 // This is the function that allows you to programatically create pages via the graphql
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
   // Create an array to hold all the entries (pages)
   var allEntries = [];
@@ -23,9 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
       );
       const response = await graphql(page.query);
       if (response.errors) {
-        reporter.panicOnBuild(
-          "❌ Errors whilst grabbing your Craft CMS entries"
-        );
+        reporter.panic("❌ Errors whilst grabbing your Craft CMS entries");
         return;
       }
       console.log(
@@ -47,7 +45,7 @@ exports.createPages = async ({ graphql, actions }) => {
         });
       } else {
         // End the process as there were no entries for the reference.
-        reporter.panicOnBuild(
+        reporter.reporter(
           "❌ Error: there are no entries for query with reference" +
             page.reference +
             "."
