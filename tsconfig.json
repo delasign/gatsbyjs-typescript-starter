@@ -12,6 +12,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": false,
+    "baseUrl": "./",
     "paths": {
       "components/*": ["./src/components/*"],
       "reduxFunctionality/*": ["./src/reduxFunctionality/*"],
