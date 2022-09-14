@@ -12,7 +12,7 @@ const Pages = [
 
 // This is the function that allows you to programatically create pages via the graphql
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
   // Create an array to hold all the entries (pages)
   var allEntries = [];
   // Gather all the pages
@@ -72,6 +72,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       });
       console.log("✅ Creatied Page with entry.");
+      // Create Redirect /frompath to the home page
+      createRedirect({
+        fromPath: `/frompath`,
+        toPath: `/`,
+      });
     })
   );
 };
