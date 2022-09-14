@@ -46,10 +46,7 @@ export const query = graphql`
   query BlogPostPageQuery($slug: String) {
     craftApi {
       entry(section: "blog", type: "post", slug: [$slug], status: ["enabled"]) {
-        ... on CraftAPI_blog_post_Entry {
-          metaTitle
-          metaDescription
-        }
+        ...SEOFragment
       }
     }
   }
