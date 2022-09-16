@@ -22,5 +22,13 @@ module.exports = {
         url: process.env.GATSBY_CRAFT_GRAPHQL_API,
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: process.env.GATSBY_TYPEKIT_ID,
+        },
+      },
+    },
   ],
 };
